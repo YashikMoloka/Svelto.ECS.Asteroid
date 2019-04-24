@@ -5,7 +5,7 @@ using Svelto.ECS;
 namespace Code.Descriptors
 {
     public class PlayerDescriptor : GenericEntityDescriptor<PlayerInputDataEntityStruct, PlayerEntityViewStruct, 
-        PlayerCollideAsteroidViewStruct, PlayerLivesEntityStruct>
+        CollideViewStruct, PlayerLivesEntityStruct, GameObjectViewStruct>
     {
         
     }

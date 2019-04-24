@@ -18,13 +18,13 @@ namespace Code.Engines
 
         IEnumerator Ressurect()
         {
-            while (!entitiesDB.HasAny<PlayerCollideAsteroidViewStruct>(ECSGroups.Player))
+            while (!entitiesDB.HasAny<CollideViewStruct>(ECSGroups.Player))
             {
                 yield return null;
             }
             while (true)
             {
-                var player = entitiesDB.QueryEntities<PlayerCollideAsteroidViewStruct, PlayerLivesEntityStruct, PlayerEntityViewStruct>(ECSGroups.Player, out var count);
+                var player = entitiesDB.QueryEntities<CollideViewStruct, PlayerLivesEntityStruct, PlayerEntityViewStruct>(ECSGroups.Player, out var count);
                 if (player.Item2[0].IsDead)
                 {
                     var timer = new WaitForSecondsEnumerator(3);

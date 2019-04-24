@@ -4,7 +4,8 @@ using Svelto.ECS;
 
 namespace Code.Descriptors
 {
-    public class ShootDescriptor : GenericEntityDescriptor<ShootInfoEntityStruct, TransformEntityViewStruct>
+    public class ShootDescriptor : GenericEntityDescriptor<ShootInfoEntityStruct, TransformEntityViewStruct, 
+        CollideViewStruct, GameObjectViewStruct>
     {
         
     }

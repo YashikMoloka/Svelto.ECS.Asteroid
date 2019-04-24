@@ -50,4 +50,8 @@ namespace Code.Components
         bool IsCollide { get; set; }
         bool IsCollideLocked { get; set; }
     }
+    public interface IGameObjectComponent : IComponent
+    {
+        bool DestroyIt { set; }
+    }
 }

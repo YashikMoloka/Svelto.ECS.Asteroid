@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Code.Others;
 using Svelto.ECS;
 using UnityEngine;
 
@@ -8,11 +9,13 @@ namespace Code.Structs
     {
         public Vector2[] Points;
         public Vector2 Forward;
-        
-        public AsteroidInfoEntityStruct(List<Vector2> cartesian, Vector2 forward)
+        public AsteroidType AsteroidType;
+
+        public AsteroidInfoEntityStruct(Vector2[] points, Vector2 forward, AsteroidType asteroidType)
         {
-            Points = cartesian.ToArray();
+            Points = points;
             Forward = forward;
+            AsteroidType = asteroidType;
         }
     }
 }

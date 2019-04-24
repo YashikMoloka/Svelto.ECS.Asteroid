@@ -26,6 +26,7 @@ namespace Code.Engines
         {
             _enemyFactory = enemyFactory;
         }
+        
         IEnumerator<TaskContract> Spawn()
         {
             for (int i = 0; i < Consts.ASTEROID_START_SPAWNS; i++)
@@ -55,7 +56,7 @@ namespace Code.Engines
             };
             var randomPos = rects[Random.Range(0, 3)];
             var randomforward = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
-            _enemyFactory.Build(randomPos, randomforward);
+            _enemyFactory.Build(AsteroidType.Big, randomPos, randomforward, Consts.ASTEROID_BIG_SIZE);
         }
         
     }

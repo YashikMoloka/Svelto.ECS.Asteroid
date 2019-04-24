@@ -9,18 +9,18 @@ namespace Code.Utils
     {
         private const int N_MIN = 8;
         private const int N_MAX = 10;
-        private const double R_MIN = 0.3;
-        private const double R_MAX = 1.0;
+//        private const double R_MIN = 0.3;
+                                           //        private const double R_MAX = 1.0;
         
-        public static List<Vector2> GenerateRandom(Random rng = null)
+        public static List<Vector2> GenerateRandom(Vector2 size, Random rnd = null)
         {
-            if (rng == null)
-                rng = new Random();
+            if (rnd == null)
+                rnd = new Random(Guid.NewGuid().GetHashCode());
 
-            var n = rng.Next(N_MIN, N_MAX);
+            var n = rnd.Next(N_MIN, N_MAX);
 
-            var angles = GenerateAngles(n, rng);
-            var radius = Enumerable.Range(0, n).Select(x => (rng.NextDouble() * (R_MAX - R_MIN)) + R_MIN).ToList();
+            var angles = GenerateAngles(n, rnd);
+            var radius = Enumerable.Range(0, n).Select(x => (rnd.NextDouble() * (size.y - size.x)) + size.x).ToList();
 
             var points = Enumerable.Range(0, n).Select(x => new Vector2((float)angles[x], (float)radius[x])).ToList();
             return points;

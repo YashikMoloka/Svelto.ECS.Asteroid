@@ -17,24 +17,27 @@ namespace Code.Others
             _entityFactory     = entityFactory;
         }
         
-        public void Build(Vector2 randomvector, Vector2 randomforward)
+        public void Build(AsteroidType type, Vector2 randomvector, Vector2 randomforward, Vector2 size, System.Random rnd = null)
         {
-            var points = GenerateRandom();
+            var points = GenerateRandom(size, rnd);
             var cartesian = points
                 .Select(x => new Vector2(x.x, x.y))
                 .Select(Polar2Cartesian)
                 .ToList();
             var gameobject = new GameObject();
             gameobject.transform.position = randomvector;
-            gameobject.AddComponent<PolygonCollider2D>().points = cartesian.ToArray();
+            var col = gameobject.AddComponent<PolygonCollider2D>();
+            col.points = cartesian.ToArray();
+            col.isTrigger = true;
             gameobject.AddComponent<Rigidbody2D>().isKinematic = true;
             gameobject.layer = LayerMask.NameToLayer("Asteroid");
-            var impl = gameobject.AddComponent<PlayerMovementImplementor>();
-
+            var impl1 = (IImplementor)gameobject.AddComponent<PlayerMovementImplementor>();
+            var impl2 = (IImplementor)gameobject.AddComponent<GameObjectImplementor>();
+            var impl3 = (IImplementor)gameobject.AddComponent<CollisionImplementor>();
             var initializer = _entityFactory
                 .BuildEntity<AsteroidDescriptor>(new EGID((uint) gameobject.GetInstanceID(), ECSGroups.Asteroid),
-                    new[] {impl});
-            initializer.Init(new AsteroidInfoEntityStruct(cartesian, randomforward.normalized));
+                    new[] {impl1, impl2, impl3});
+            initializer.Init(new AsteroidInfoEntityStruct(cartesian.ToArray(), randomforward.normalized, type));
         }
         
         readonly IEntityFactory    _entityFactory;

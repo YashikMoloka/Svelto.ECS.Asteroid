@@ -33,11 +33,13 @@ namespace Code.Engines
                 entitiesDB.QueryEntities<PlayerInputDataEntityStruct>(ECSGroups.Player, out var count);
             while (true)
             {
+                while (entitiesDB.QueryUniqueEntity<PlayerLivesEntityStruct>(ECSGroups.Player).IsDead)
+                    yield return null;
                 if (input[0].IsFire)
                 {
                     var player = entitiesDB.QueryUniqueEntity<PlayerEntityViewStruct>(ECSGroups.Player);
-                    _shootFactory.Build(player.TransformComponent.position, player.TransformComponent.rotation * Vector3.right);
-                    var timer = new WaitForSecondsEnumerator(3);
+                    _shootFactory.Build(player.TransformComponent.position, player.TransformComponent.rotation * Vector3.up);
+                    var timer = new WaitForSecondsEnumerator(Consts.PLAYER_SHOOT_COOLDOWN);
                     while (timer.MoveNext())
                     {
                         yield return null;

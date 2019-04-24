@@ -19,7 +19,7 @@ namespace Code.Others
             
             var shoot = GameObject.Instantiate(template);
             shoot.transform.position = pos;
-            shoot.transform.rotation = Quaternion.LookRotation(forward);
+            shoot.transform.rotation = Quaternion.Euler(0, 0, Vector2.SignedAngle(Vector2.up, forward));
             var implementors = shoot.GetComponentsInChildren<IImplementor>() ?? new object[0];
             
             var initializer = _entityFactory

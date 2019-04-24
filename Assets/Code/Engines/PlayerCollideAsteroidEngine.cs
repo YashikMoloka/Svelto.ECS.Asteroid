@@ -16,11 +16,11 @@ namespace Code.Engines
 
         IEnumerator Collide()
         {
-            while (!entitiesDB.HasAny<PlayerCollideAsteroidViewStruct>(ECSGroups.Player))
+            while (!entitiesDB.HasAny<CollideViewStruct>(ECSGroups.Player))
                 yield return null;
             while (true)
             {
-                var player = entitiesDB.QueryEntities<PlayerCollideAsteroidViewStruct, PlayerLivesEntityStruct>(ECSGroups.Player, out var count);
+                var player = entitiesDB.QueryEntities<CollideViewStruct, PlayerLivesEntityStruct>(ECSGroups.Player, out var count);
 
                 if (player.Item1[0].CollisionComponent.IsCollide)
                 {

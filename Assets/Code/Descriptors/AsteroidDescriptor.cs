@@ -4,7 +4,8 @@ using Svelto.ECS;
 
 namespace Code.Descriptors
 {
-    public class AsteroidDescriptor : GenericEntityDescriptor<AsteroidInfoEntityStruct, TransformEntityViewStruct>
+    public class AsteroidDescriptor : GenericEntityDescriptor<AsteroidInfoEntityStruct, TransformEntityViewStruct, 
+        CollideViewStruct, GameObjectViewStruct>
     {
         
     }
