@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Yashik\.Rider2018.3\config\scratches" t="IncludeRecursive" />
+    <e p="C:\Users\Yashik\.Rider2018.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Yashik\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_Svelto.2072994844.00" t="ExcludeRecursive" />
+    <e p="D:\MyCVisualStudio\Projects\Svelto.Tasks\Svelto.Tasks" t="IncludeRecursive">
+      <e p="bin" t="ExcludeRecursive" />
+      <e p="BreakIt.cs" t="Include" />
+      <e p="Collections" t="Include">
+        <e p="ParallelTaskCollection.cs" t="Include" />
+        <e p="SerialTaskCollection.cs" t="Include" />
+        <e p="TaskCollection.cs" t="Include" />
+        <e p="TaskCollection.StructFriendlyStack.cs" t="Include" />
+      </e>
+      <e p="DBC.cs" t="Include" />
+      <e p="Enumerators" t="Include">
+        <e p="ActionEnumerators" t="Include">
+          <e p="InterleavedLoopActionEnumerator.cs" t="Include" />
+          <e p="LocalFunctionEnumerator.cs" t="Include" />
+          <e p="SmartFunctionEnumerator.cs" t="Include" />
+          <e p="TimedLoopFunctionEnumerator.cs" t="Include" />
+        </e>
+        <e p="ContinuationEnumerator.cs" t="Include" />
+        <e p="ContinuationPool.cs" t="Include" />
+        <e p="ReusableWaitForSecondsEnumerator.cs" t="Include" />
+        <e p="Unity" t="Include">
+          <e p="UnityWebRequestEnumerator.cs" t="Include" />
+          <e p="YieldInstructionEnumerator.cs" t="Include" />
+        </e>
+        <e p="WaitForSecondsEnumerator.cs" t="Include" />
+        <e p="WaitForSignal.cs" t="Include" />
+      </e>
+      <e p="ExtraLeanSveltoTask.cs" t="Include" />
+      <e p="ITaskRoutine.cs" t="Include" />
+      <e p="LeanSveltoTask.cs" t="Include" />
+      <e p="obj" t="ExcludeRecursive">
+        <e p="Debug" t="Include">
+          <e p="netstandard2.0" t="Include">
+            <e p="Svelto.Tasks.AssemblyInfo.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Parallelism" t="Include">
+        <e p="IMultiThreadParallelizable.cs" t="Include" />
+        <e p="ISveltoJob.cs" t="Include" />
+        <e p="MultiThreadedParallelTaskCollection.cs" t="Include" />
+        <e p="ParallelRunEnumerator.cs" t="Include" />
+      </e>
+      <e p="Profiler" t="Include">
+        <e p="Editor" t="Include">
+          <e p="TaskProfiler" t="Include">
+            <e p="ProfilerEditorLayout.cs" t="Include" />
+            <e p="TaskProfilerMenuItem.cs" t="Include" />
+            <e p="TasksMonitor.cs" t="Include" />
+            <e p="TasksProfilerBehaviour.cs" t="Include" />
+            <e p="TasksProfilerInspector.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Pix" t="Include">
+          <e p="PIXWrapper.cs" t="Include" />
+        </e>
+        <e p="TaskInfo.cs" t="Include" />
+        <e p="TaskProfiler.cs" t="Include" />
+      </e>
+      <e p="Runners" t="Include">
+        <e p="BaseRunner.cs" t="Include" />
+        <e p="CoroutineRunner.cs" t="Include" />
+        <e p="FlowModifiers" t="Include">
+          <e p="StaggeredMonoRunner.cs" t="Include" />
+          <e p="TimeBoundRunner.cs" t="Include" />
+          <e p="TimeSlicedMonoRunner.cs" t="Include" />
+        </e>
+        <e p="IRunner.cs" t="Include" />
+        <e p="IRunningTasksInfo.cs" t="Include" />
+        <e p="MultiThreadRunner.cs" t="Include" />
+        <e p="SyncRunner.cs" t="Include" />
+        <e p="Unity" t="Include">
+          <e p="CoroutineMonoRunner.cs" t="Include" />
+          <e p="EarlyUpdateMonoRunner.cs" t="Include" />
+          <e p="Editor" t="Include">
+            <e p="Svelto.Tasks.StopEditorThread.asmdef" t="Include" />
+            <e p="UnityThreadStopper.cs" t="Include" />
+          </e>
+          <e p="EndOfFrameRunner.cs" t="Include" />
+          <e p="LateMonoRunner.cs" t="Include" />
+          <e p="PhysicMonoRunner.cs" t="Include" />
+          <e p="RunnerBehaviourUpdate.cs" t="Include" />
+          <e p="UnityCoroutineRunner.cs" t="Include" />
+          <e p="UnityJobRunner.cs" t="Include" />
+          <e p="UpdateMonoRunner.cs" t="Include" />
+        </e>
+      </e>
+      <e p="ServiceTasks" t="Include">
+        <e p="IServiceTask.cs" t="Include" />
+      </e>
+      <e p="StandardExtraLeanSchedulers.cs" t="Include" />
+      <e p="StandardLeanSchedulers.cs" t="Include" />
+      <e p="StandardTaskRoutineSchedulers.cs" t="Include" />
+      <e p="Svelto.Tasks.asmdef" t="Include" />
+      <e p="Svelto.Tasks.csproj" t="IncludeRecursive" />
+      <e p="SveltoTask.cs" t="Include" />
+      <e p="SveltoTaskState.cs" t="Include" />
+      <e p="SveltoTaskWrapper.cs" t="Include" />
+      <e p="TaskContract.cs" t="Include" />
+      <e p="TaskRoutine.cs" t="Include" />
+      <e p="TaskRunner.cs" t="Include" />
+      <e p="TaskRunnerExtensions.cs" t="Include" />
+      <e p="TasksChain" t="Include">
+        <e p="ITaskChain.cs" t="Include" />
+        <e p="ParallelTaskCollection.cs" t="Include" />
+        <e p="SerialTaskCollection.cs" t="Include" />
+      </e>
+      <e p="TaskYieldsIEnumerableException.cs" t="Include" />
+      <e p="Yield.cs" t="Include" />
+    </e>
+  </component>
+</project>

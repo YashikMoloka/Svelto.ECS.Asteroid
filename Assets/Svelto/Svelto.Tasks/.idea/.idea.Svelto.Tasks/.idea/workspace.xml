@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BuildServerSettings">
+    <option name="LOGIN" value="" />
+    <option name="SERVER_URL" value="http://buildserver" />
+    <option name="REMEMBER_ME" value="true" />
+    <option name="USE_IDEA_PROXY_SETTINGS" value="true" />
+    <option name="INSPECTIONS_BUILD_TYPE_IDS" />
+    <option name="DUPLICATES_BUILD_TYPE_IDS" />
+    <option name="COVERAGE_SETTINGS" />
+    <option name="TEST_STATUS_ENABLED" value="true" />
+    <option name="TEST_STATUS_SHOW_SUCCESSFUL" value="false" />
+    <option name="POSTPONE_SUITABLE_CONFIGURATIONS_SEARCH" value="false" />
+    <option name="ARTIFACTS_BUILD_TYPE_IDS" />
+    <option name="PERFORM_COMMIT_IF_SUCCESSFUL" value="true" />
+    <option name="PERFORM_COMMIT_IF_NO_NEW_FAILED_TESTS" value="false" />
+    <option name="REQUEST_CONFIRMATON" value="false" />
+    <option name="PRE_TESTED_COMMIT" value="true" />
+    <option name="FILTER_BY_STATUS" value="false" />
+    <option name="FILTER_MARKED_AS_FIXED" value="false" />
+    <option name="SHOW_CLOSE_PROMPT" value="true" />
+    <option name="TOOL_WINDOW_SELECTED_CONTENT_INDEX" value="0" />
+    <option name="FILTER_BY_CURRENT_PROJECT" value="true" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0b7daf43-69e5-4efa-a8d7-3d6654dd282e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Svelto.Tasks.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Svelto.Tasks.csproj" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Svelto.Common/Svelto.Common.csproj">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/StandardExtraLeanSchedulers.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="48">
+              <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+              <folding>
+                <marker date="1555260208191" expanded="true" signature="59:4671" ph="{...}" />
+                <marker date="1555260208191" expanded="true" signature="104:4669" ph="{...}" />
+                <marker date="1555260208191" expanded="true" signature="2360:2474" ph="{...}" />
+                <marker date="1555260208191" expanded="true" signature="2388:2463" ph="{...}" />
+                <marker date="1555260208191" expanded="true" signature="2631:3263" ph="{...}" />
+                <marker date="1555260208191" expanded="true" signature="3299:3691" ph="{...}" />
+                <marker date="1555260208191" expanded="true" signature="3728:4126" ph="{...}" />
+                <marker date="1555260208191" expanded="true" signature="4174:4663" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TaskRunnerExtensions.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="32">
+              <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+              <folding>
+                <marker date="1555260208196" expanded="false" signature="6:149" ph="..." />
+                <marker date="1555260208196" expanded="true" signature="183:782" ph="{...}" />
+                <marker date="1555260208196" expanded="true" signature="230:780" ph="{...}" />
+                <marker date="1555260208196" expanded="true" signature="412:508" ph="{...}" />
+                <marker date="1555260208196" expanded="true" signature="672:774" ph="{...}" />
+                <marker date="1555260208196" expanded="true" signature="811:1524" ph="{...}" />
+                <marker date="1555260208196" expanded="true" signature="858:1522" ph="{...}" />
+                <marker date="1555260208196" expanded="true" signature="1080:1183" ph="{...}" />
+                <marker date="1555260208196" expanded="true" signature="1393:1516" ph="{...}" />
+                <marker date="1555260208196" expanded="true" signature="1566:4261" ph="{...}" />
+                <marker date="1555260208196" expanded="true" signature="1672:1729" ph="{...}" />
+                <marker date="1555260208196" expanded="true" signature="1803:1860" ph="{...}" />
+                <marker date="1555260208196" expanded="true" signature="1952:2681" ph="{...}" />
+                <marker date="1555260208196" expanded="true" signature="2018:2412" ph="{...}" />
+                <marker date="1555260208196" expanded="true" signature="2425:2647" ph="{...}" />
+                <marker date="1555260208196" expanded="true" signature="2785:3447" ph="{...}" />
+                <marker date="1555260208196" expanded="true" signature="3047:3441" ph="{...}" />
+                <marker date="1555260208196" expanded="true" signature="3457:3923" ph="/// Keeping this until I prove I can actually work without RunImmediate. The last parameter is false, ... " />
+                <marker date="1555260208196" expanded="true" signature="4150:4259" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BreakIt.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="32">
+              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+              <folding>
+                <marker date="1555260208157" expanded="true" signature="22:158" ph="{...}" />
+                <marker date="1555260208157" expanded="true" signature="47:156" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DBC.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="864">
+              <caret line="54" column="17" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="17" />
+              <folding>
+                <marker date="1555260208160" expanded="true" signature="127:9736" ph="{...}" />
+                <marker date="1555260208160" expanded="true" signature="131:1551" ph="/// Design By Contract Checks. ... " />
+                <marker date="1555260208160" expanded="true" signature="1571:6780" ph="{...}" />
+                <marker date="1555260208160" expanded="false" signature="1577:6433" ph="Interface" />
+                <marker date="1555260208160" expanded="true" signature="1598:1654" ph="/// Precondition check. ... " />
+                <marker date="1555260208160" expanded="true" signature="1778:1962" ph="{...}" />
+                <marker date="1555260208160" expanded="true" signature="1805:1883" ph="{...}" />
+                <marker date="1555260208160" expanded="true" signature="1891:1958" ph="{...}" />
+                <marker date="1555260208160" expanded="true" signature="1966:2029" ph="/// Precondition check. ... " />
+                <marker date="1555260208160" expanded="true" signature="2170:2361" ph="{...}" />
+                <marker date="1555260208160" expanded="true" signature="2197:2282" ph="{...}" />
+                <marker date="1555260208160" expanded="true" signature="2290:2357" ph="{...}" />
+                <marker date="1555260208160" expanded="true" signature="2365:2428" ph="/// Precondition check. ... " />
+                <marker date="1555260208160" expanded="true" signature="2536:2730" ph="{...}" />
+                <marker date="1555260208160" expanded="true" signature="2563:2655" ph="{...}" />
+                <marker date="1555260208160" expanded="true" signature="2663:2726" ph="{...}" />
+                <marker date="1555260208160" expanded="true" signature="2736:2800" ph="/// Postcondition check. ... " />
+                <marker date="1555260208160" expanded="true" signature="2923:3109" ph="{...}" />
+                <marker date="1555260208160" expanded="true" signature="2950:3029" ph="{...}" />
+                <marker date="1555260208160" expanded="true" signature="3037:3105" ph="{...}" />
+                <marker date="1555260208160" expanded="true" signature="3113:3177" ph="/// Postcondition check. ... " />
+                <marker date="1555260208160" expanded="true" signature="3317:3510" ph="{...}" />
+                <marker date="1555260208160" expanded="true" signature="3344:3430" ph="{...}" />
+                <marker date="1555260208160" expanded="true" signature="3438:3506" ph="{...}" />
+                <marker date="1555260208160" expanded="true" signature="3514:3578" ph="/// Postcondition check. ... " />
+                <marker date="1555260208160" expanded="true" signature="3685:3883" ph="{...}" />
+                <marker date="1555260208160" expanded="true" signature="3712:3807" ph="{...}" />
+                <marker date="1555260208160" expanded="true" signature="3815:3879" ph="{...}" />
+                <marker date="1555260208160" expanded="true" signature="3889:3949" ph="/// Invariant check. ... " />
+                <marker date="1555260208160" expanded="true" signature="4075:4253" ph="{...}" />
+                <marker date="1555260208160" expanded="true" signature="4102:4177" ph="{...}" />
+                <marker date="1555260208160" expanded="true" signature="4185:4249" ph="{...}" />
+                <marker date="1555260208160" expanded="true" signature="4257:4317" ph="/// Invariant check. ... " />
+                <marker date="1555260208160" expanded="true" signature="4460:4645" ph="{...}" />
+                <marker date="1555260208160" expanded="true" signature="4487:4569" ph="{...}" />
+                <marker date="1555260208160" expanded="true" signature="4577:4641" ph="{...}" />
+                <marker date="1555260208160" expanded="true" signature="4649:4709" ph="/// Invariant check. ... " />
+                <marker date="1555260208160" expanded="true" signature="4819:5005" ph="{...}" />
+                <marker date="1555260208160" expanded="true" signature="4846:4933" ph="{...}" />
+                <marker date="1555260208160" expanded="true" signature="4941:5001" ph="{...}" />
+                <marker date="1555260208160" expanded="true" signature="5009:5062" ph="/// Assertion check. ... " />
+                <marker date="1555260208160" expanded="true" signature="5185:5363" ph="{...}" />
+                <marker date="1555260208160" expanded="true" signature="5212:5287" ph="{...}" />
+                <marker date="1555260208160" expanded="true" signature="5295:5359" ph="{...}" />
+                <marker date="1555260208160" expanded="true" signature="5367:5427" ph="/// Assertion check. ... " />
+                <marker date="1555260208160" expanded="true" signature="5567:5752" ph="{...}" />
+                <marker date="1555260208160" expanded="true" signature="5594:5676" ph="{...}" />
+                <marker date="1555260208160" expanded="true" signature="5684:5748" ph="{...}" />
+                <marker date="1555260208160" expanded="true" signature="5756:5816" ph="/// Assertion check. ... " />
+                <marker date="1555260208160" expanded="true" signature="5923:6108" ph="{...}" />
+                <marker date="1555260208160" expanded="true" signature="5950:6036" ph="{...}" />
+                <marker date="1555260208160" expanded="true" signature="6044:6104" ph="{...}" />
+                <marker date="1555260208160" expanded="true" signature="6112:6299" ph="/// Set this if you wish to use Trace Assert statements  ... " />
+                <marker date="1555260208160" expanded="true" signature="6334:6404" ph="{...}" />
+                <marker date="1555260208160" expanded="false" signature="6437:6776" ph="Implementation" />
+                <marker date="1555260208160" expanded="true" signature="6481:6551" ph="/// Is exception handling being used? ... " />
+                <marker date="1555260208160" expanded="true" signature="6610:6699" ph="/* Are trace assertion statements being used? ... */" />
+                <marker date="1555260208160" expanded="true" signature="6810:7069" ph="{...}" />
+                <marker date="1555260208160" expanded="true" signature="6878:7063" ph="{...}" />
+                <marker date="1555260208160" expanded="false" signature="7075:9733" ph="Exceptions" />
+                <marker date="1555260208160" expanded="true" signature="7099:7334" ph="/// Exception raised when a contract is broken. ... " />
+                <marker date="1555260208160" expanded="true" signature="7389:7608" ph="{...}" />
+                <marker date="1555260208160" expanded="true" signature="7611:7689" ph="/// Exception raised when a precondition fails. ... " />
+                <marker date="1555260208160" expanded="true" signature="7753:8140" ph="{...}" />
+                <marker date="1555260208160" expanded="true" signature="7759:7819" ph="/// Precondition Exception. ... " />
+                <marker date="1555260208160" expanded="true" signature="7858:7918" ph="/// Precondition Exception. ... " />
+                <marker date="1555260208160" expanded="true" signature="7987:8047" ph="/// Precondition Exception. ... " />
+                <marker date="1555260208160" expanded="true" signature="8144:8223" ph="/// Exception raised when a postcondition fails. ... " />
+                <marker date="1555260208160" expanded="true" signature="8288:8681" ph="{...}" />
+                <marker date="1555260208160" expanded="true" signature="8294:8355" ph="/// Postcondition Exception. ... " />
+                <marker date="1555260208160" expanded="true" signature="8395:8456" ph="/// Postcondition Exception. ... " />
+                <marker date="1555260208160" expanded="true" signature="8526:8587" ph="/// Postcondition Exception. ... " />
+                <marker date="1555260208160" expanded="true" signature="8684:8760" ph="/// Exception raised when an invariant fails. ... " />
+                <marker date="1555260208160" expanded="true" signature="8821:9190" ph="{...}" />
+                <marker date="1555260208160" expanded="true" signature="8827:8884" ph="/// Invariant Exception. ... " />
+                <marker date="1555260208160" expanded="true" signature="8920:8977" ph="/// Invariant Exception. ... " />
+                <marker date="1555260208160" expanded="true" signature="9043:9100" ph="/// Invariant Exception. ... " />
+                <marker date="1555260208160" expanded="true" signature="9193:9269" ph="/// Exception raised when an assertion fails. ... " />
+                <marker date="1555260208160" expanded="true" signature="9330:9699" ph="{...}" />
+                <marker date="1555260208160" expanded="true" signature="9336:9393" ph="/// Assertion Exception. ... " />
+                <marker date="1555260208160" expanded="true" signature="9429:9486" ph="/// Assertion Exception. ... " />
+                <marker date="1555260208160" expanded="true" signature="9552:9609" ph="/// Assertion Exception. ... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ITaskRoutine.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="327">
+              <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+              <folding>
+                <marker date="1555260208169" expanded="false" signature="6:71" ph="..." />
+                <marker date="1555260208169" expanded="true" signature="73:560" ph="/* ITaskRoutine allocated explicitly have several features not ... */" />
+                <marker date="1555260208169" expanded="true" signature="584:1060" ph="{...}" />
+                <marker date="1555260208169" expanded="true" signature="643:1058" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/BreakIt.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ITaskRoutine.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DBC.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TaskRunnerExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/StandardExtraLeanSchedulers.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="200" />
+    <option name="y" value="153" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="AssemblyExplorer" />
+      <pane id="SolutionExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Svelto.Tasks" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-all-files" value="false" />
+      </pane>
+      <pane id="FileSystemExplorer" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Svelto.Common/Svelto.Common.csproj" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0b7daf43-69e5-4efa-a8d7-3d6654dd282e" name="Default Changelist" comment="" />
+      <created>1555260575113</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1555260575113</updated>
+      <workItem from="1555260577987" duration="219000" />
+      <workItem from="1555261949200" duration="168000" />
+      <workItem from="1555262193037" duration="113000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="500000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2563966" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Capture Tool" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
+      <window_info anchor="bottom" id="NuGet" order="7" weight="0.32936078" />
+      <window_info anchor="bottom" id="Performance Profiler" order="8" visible="true" weight="0.219935" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32936078" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="bottom" id="Unit Tests" order="12" />
+      <window_info anchor="bottom" id="TeamCity" order="13" />
+      <window_info anchor="bottom" id="Terminal" order="14" weight="0.32936078" />
+      <window_info anchor="bottom" id="Event Log" order="15" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="right" id="Errors In Solution" order="4" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" id="Unit Tests Coverage" order="6" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" suspend="NONE" type="DotNet Exception Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/../Svelto.Common/Svelto.Common.csproj">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StandardExtraLeanSchedulers.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+          <folding>
+            <marker date="1555260208191" expanded="true" signature="59:4671" ph="{...}" />
+            <marker date="1555260208191" expanded="true" signature="104:4669" ph="{...}" />
+            <marker date="1555260208191" expanded="true" signature="2360:2474" ph="{...}" />
+            <marker date="1555260208191" expanded="true" signature="2388:2463" ph="{...}" />
+            <marker date="1555260208191" expanded="true" signature="2631:3263" ph="{...}" />
+            <marker date="1555260208191" expanded="true" signature="3299:3691" ph="{...}" />
+            <marker date="1555260208191" expanded="true" signature="3728:4126" ph="{...}" />
+            <marker date="1555260208191" expanded="true" signature="4174:4663" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskRunnerExtensions.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+          <folding>
+            <marker date="1555260208196" expanded="false" signature="6:149" ph="..." />
+            <marker date="1555260208196" expanded="true" signature="183:782" ph="{...}" />
+            <marker date="1555260208196" expanded="true" signature="230:780" ph="{...}" />
+            <marker date="1555260208196" expanded="true" signature="412:508" ph="{...}" />
+            <marker date="1555260208196" expanded="true" signature="672:774" ph="{...}" />
+            <marker date="1555260208196" expanded="true" signature="811:1524" ph="{...}" />
+            <marker date="1555260208196" expanded="true" signature="858:1522" ph="{...}" />
+            <marker date="1555260208196" expanded="true" signature="1080:1183" ph="{...}" />
+            <marker date="1555260208196" expanded="true" signature="1393:1516" ph="{...}" />
+            <marker date="1555260208196" expanded="true" signature="1566:4261" ph="{...}" />
+            <marker date="1555260208196" expanded="true" signature="1672:1729" ph="{...}" />
+            <marker date="1555260208196" expanded="true" signature="1803:1860" ph="{...}" />
+            <marker date="1555260208196" expanded="true" signature="1952:2681" ph="{...}" />
+            <marker date="1555260208196" expanded="true" signature="2018:2412" ph="{...}" />
+            <marker date="1555260208196" expanded="true" signature="2425:2647" ph="{...}" />
+            <marker date="1555260208196" expanded="true" signature="2785:3447" ph="{...}" />
+            <marker date="1555260208196" expanded="true" signature="3047:3441" ph="{...}" />
+            <marker date="1555260208196" expanded="true" signature="3457:3923" ph="/// Keeping this until I prove I can actually work without RunImmediate. The last parameter is false, ... " />
+            <marker date="1555260208196" expanded="true" signature="4150:4259" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BreakIt.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+          <folding>
+            <marker date="1555260208157" expanded="true" signature="22:158" ph="{...}" />
+            <marker date="1555260208157" expanded="true" signature="47:156" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBC.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="864">
+          <caret line="54" column="17" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="17" />
+          <folding>
+            <marker date="1555260208160" expanded="true" signature="127:9736" ph="{...}" />
+            <marker date="1555260208160" expanded="true" signature="131:1551" ph="/// Design By Contract Checks. ... " />
+            <marker date="1555260208160" expanded="true" signature="1571:6780" ph="{...}" />
+            <marker date="1555260208160" expanded="false" signature="1577:6433" ph="Interface" />
+            <marker date="1555260208160" expanded="true" signature="1598:1654" ph="/// Precondition check. ... " />
+            <marker date="1555260208160" expanded="true" signature="1778:1962" ph="{...}" />
+            <marker date="1555260208160" expanded="true" signature="1805:1883" ph="{...}" />
+            <marker date="1555260208160" expanded="true" signature="1891:1958" ph="{...}" />
+            <marker date="1555260208160" expanded="true" signature="1966:2029" ph="/// Precondition check. ... " />
+            <marker date="1555260208160" expanded="true" signature="2170:2361" ph="{...}" />
+            <marker date="1555260208160" expanded="true" signature="2197:2282" ph="{...}" />
+            <marker date="1555260208160" expanded="true" signature="2290:2357" ph="{...}" />
+            <marker date="1555260208160" expanded="true" signature="2365:2428" ph="/// Precondition check. ... " />
+            <marker date="1555260208160" expanded="true" signature="2536:2730" ph="{...}" />
+            <marker date="1555260208160" expanded="true" signature="2563:2655" ph="{...}" />
+            <marker date="1555260208160" expanded="true" signature="2663:2726" ph="{...}" />
+            <marker date="1555260208160" expanded="true" signature="2736:2800" ph="/// Postcondition check. ... " />
+            <marker date="1555260208160" expanded="true" signature="2923:3109" ph="{...}" />
+            <marker date="1555260208160" expanded="true" signature="2950:3029" ph="{...}" />
+            <marker date="1555260208160" expanded="true" signature="3037:3105" ph="{...}" />
+            <marker date="1555260208160" expanded="true" signature="3113:3177" ph="/// Postcondition check. ... " />
+            <marker date="1555260208160" expanded="true" signature="3317:3510" ph="{...}" />
+            <marker date="1555260208160" expanded="true" signature="3344:3430" ph="{...}" />
+            <marker date="1555260208160" expanded="true" signature="3438:3506" ph="{...}" />
+            <marker date="1555260208160" expanded="true" signature="3514:3578" ph="/// Postcondition check. ... " />
+            <marker date="1555260208160" expanded="true" signature="3685:3883" ph="{...}" />
+            <marker date="1555260208160" expanded="true" signature="3712:3807" ph="{...}" />
+            <marker date="1555260208160" expanded="true" signature="3815:3879" ph="{...}" />
+            <marker date="1555260208160" expanded="true" signature="3889:3949" ph="/// Invariant check. ... " />
+            <marker date="1555260208160" expanded="true" signature="4075:4253" ph="{...}" />
+            <marker date="1555260208160" expanded="true" signature="4102:4177" ph="{...}" />
+            <marker date="1555260208160" expanded="true" signature="4185:4249" ph="{...}" />
+            <marker date="1555260208160" expanded="true" signature="4257:4317" ph="/// Invariant check. ... " />
+            <marker date="1555260208160" expanded="true" signature="4460:4645" ph="{...}" />
+            <marker date="1555260208160" expanded="true" signature="4487:4569" ph="{...}" />
+            <marker date="1555260208160" expanded="true" signature="4577:4641" ph="{...}" />
+            <marker date="1555260208160" expanded="true" signature="4649:4709" ph="/// Invariant check. ... " />
+            <marker date="1555260208160" expanded="true" signature="4819:5005" ph="{...}" />
+            <marker date="1555260208160" expanded="true" signature="4846:4933" ph="{...}" />
+            <marker date="1555260208160" expanded="true" signature="4941:5001" ph="{...}" />
+            <marker date="1555260208160" expanded="true" signature="5009:5062" ph="/// Assertion check. ... " />
+            <marker date="1555260208160" expanded="true" signature="5185:5363" ph="{...}" />
+            <marker date="1555260208160" expanded="true" signature="5212:5287" ph="{...}" />
+            <marker date="1555260208160" expanded="true" signature="5295:5359" ph="{...}" />
+            <marker date="1555260208160" expanded="true" signature="5367:5427" ph="/// Assertion check. ... " />
+            <marker date="1555260208160" expanded="true" signature="5567:5752" ph="{...}" />
+            <marker date="1555260208160" expanded="true" signature="5594:5676" ph="{...}" />
+            <marker date="1555260208160" expanded="true" signature="5684:5748" ph="{...}" />
+            <marker date="1555260208160" expanded="true" signature="5756:5816" ph="/// Assertion check. ... " />
+            <marker date="1555260208160" expanded="true" signature="5923:6108" ph="{...}" />
+            <marker date="1555260208160" expanded="true" signature="5950:6036" ph="{...}" />
+            <marker date="1555260208160" expanded="true" signature="6044:6104" ph="{...}" />
+            <marker date="1555260208160" expanded="true" signature="6112:6299" ph="/// Set this if you wish to use Trace Assert statements  ... " />
+            <marker date="1555260208160" expanded="true" signature="6334:6404" ph="{...}" />
+            <marker date="1555260208160" expanded="false" signature="6437:6776" ph="Implementation" />
+            <marker date="1555260208160" expanded="true" signature="6481:6551" ph="/// Is exception handling being used? ... " />
+            <marker date="1555260208160" expanded="true" signature="6610:6699" ph="/* Are trace assertion statements being used? ... */" />
+            <marker date="1555260208160" expanded="true" signature="6810:7069" ph="{...}" />
+            <marker date="1555260208160" expanded="true" signature="6878:7063" ph="{...}" />
+            <marker date="1555260208160" expanded="false" signature="7075:9733" ph="Exceptions" />
+            <marker date="1555260208160" expanded="true" signature="7099:7334" ph="/// Exception raised when a contract is broken. ... " />
+            <marker date="1555260208160" expanded="true" signature="7389:7608" ph="{...}" />
+            <marker date="1555260208160" expanded="true" signature="7611:7689" ph="/// Exception raised when a precondition fails. ... " />
+            <marker date="1555260208160" expanded="true" signature="7753:8140" ph="{...}" />
+            <marker date="1555260208160" expanded="true" signature="7759:7819" ph="/// Precondition Exception. ... " />
+            <marker date="1555260208160" expanded="true" signature="7858:7918" ph="/// Precondition Exception. ... " />
+            <marker date="1555260208160" expanded="true" signature="7987:8047" ph="/// Precondition Exception. ... " />
+            <marker date="1555260208160" expanded="true" signature="8144:8223" ph="/// Exception raised when a postcondition fails. ... " />
+            <marker date="1555260208160" expanded="true" signature="8288:8681" ph="{...}" />
+            <marker date="1555260208160" expanded="true" signature="8294:8355" ph="/// Postcondition Exception. ... " />
+            <marker date="1555260208160" expanded="true" signature="8395:8456" ph="/// Postcondition Exception. ... " />
+            <marker date="1555260208160" expanded="true" signature="8526:8587" ph="/// Postcondition Exception. ... " />
+            <marker date="1555260208160" expanded="true" signature="8684:8760" ph="/// Exception raised when an invariant fails. ... " />
+            <marker date="1555260208160" expanded="true" signature="8821:9190" ph="{...}" />
+            <marker date="1555260208160" expanded="true" signature="8827:8884" ph="/// Invariant Exception. ... " />
+            <marker date="1555260208160" expanded="true" signature="8920:8977" ph="/// Invariant Exception. ... " />
+            <marker date="1555260208160" expanded="true" signature="9043:9100" ph="/// Invariant Exception. ... " />
+            <marker date="1555260208160" expanded="true" signature="9193:9269" ph="/// Exception raised when an assertion fails. ... " />
+            <marker date="1555260208160" expanded="true" signature="9330:9699" ph="{...}" />
+            <marker date="1555260208160" expanded="true" signature="9336:9393" ph="/// Assertion Exception. ... " />
+            <marker date="1555260208160" expanded="true" signature="9429:9486" ph="/// Assertion Exception. ... " />
+            <marker date="1555260208160" expanded="true" signature="9552:9609" ph="/// Assertion Exception. ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ITaskRoutine.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+          <folding>
+            <marker date="1555260208169" expanded="false" signature="6:71" ph="..." />
+            <marker date="1555260208169" expanded="true" signature="73:560" ph="/* ITaskRoutine allocated explicitly have several features not ... */" />
+            <marker date="1555260208169" expanded="true" signature="584:1060" ph="{...}" />
+            <marker date="1555260208169" expanded="true" signature="643:1058" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
