@@ -1,11 +1,8 @@
 {
-    "name": "Main",
+    "name": "Svelto.ECS.Debugger",
     "references": [
-        "Svelto.ECS",
-        "Svelto.Tasks",
-        "Svelto.Common",
-        "Svelto.ECS.Components.Unity",
-        "Svelto.ECS.Debugger"
+        "GUID:87620019395d97447ac7b27c09147d84",
+        "GUID:88feec93916afc64db45cbba3a334219"
     ],
     "optionalUnityReferences": [],
     "includePlatforms": [],

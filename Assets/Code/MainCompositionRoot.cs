@@ -3,6 +3,7 @@ using Code.Engines;
 using Code.MonoUI;
 using Code.Others;
 using Code.Structs;
+using Code.Svelto.ECS.Debugger;
 using Svelto.Context;
 using Svelto.ECS;
 using Svelto.ECS.Schedulers.Unity;
@@ -62,6 +63,8 @@ namespace Code
             
             _enginesRoot.AddEngine(new GameObjectDestroyEngine());
             _enginesRoot.AddEngine(new UiTestEngine());
+            
+            _enginesRoot.AttachDebugger();
         }
 
         private void CreateUI(IEntityStreamConsumerFactory factory)

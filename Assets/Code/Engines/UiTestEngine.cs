@@ -29,19 +29,19 @@ namespace Code.Engines
 
         private void TestLog()
         {
-            var ui = entitiesDB.QueryEntities<TestConsumerEntityStruct>(ECSGroups.Test, out var count);
-            ui[0].TESTVALUE = DateTime.Now;
-            entitiesDB.PublishEntityChange<TestConsumerEntityStruct>(ui[0].ID);
-
-            var ui2 = entitiesDB.QueryEntities<TestConsumerEntityStruct>(ECSGroups.Test, out count);
-            Debug.Log(ui2[0].TESTVALUE);
-
-            ref var ui3 = ref entitiesDB.QueryUniqueEntity<TestConsumerEntityStruct>(ECSGroups.Test);
-            ui3.TESTVALUE = DateTime.MinValue;
-
-            ui2 = entitiesDB.QueryEntities<TestConsumerEntityStruct>(ECSGroups.Test, out count);
-            Debug.Log(ui2[0].TESTVALUE);
-            Debug.Log("________________________");
+//            var ui = entitiesDB.QueryEntities<TestConsumerEntityStruct>(ECSGroups.Test, out var count);
+//            ui[0].TESTVALUE = DateTime.Now;
+//            entitiesDB.PublishEntityChange<TestConsumerEntityStruct>(ui[0].ID);
+//
+//            var ui2 = entitiesDB.QueryEntities<TestConsumerEntityStruct>(ECSGroups.Test, out count);
+//            Debug.Log(ui2[0].TESTVALUE);
+//
+//            ref var ui3 = ref entitiesDB.QueryUniqueEntity<TestConsumerEntityStruct>(ECSGroups.Test);
+//            ui3.TESTVALUE = DateTime.MinValue;
+//
+//            ui2 = entitiesDB.QueryEntities<TestConsumerEntityStruct>(ECSGroups.Test, out count);
+//            Debug.Log(ui2[0].TESTVALUE);
+//            Debug.Log("________________________");
         }
     }
 }

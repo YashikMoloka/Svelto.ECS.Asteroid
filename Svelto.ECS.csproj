@@ -59,6 +59,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Svelto\Svelto.ECS\AssemblyInfo.cs" />
     <Compile Include="Assets\Svelto\Svelto.ECS\CheckEntityUtilities.cs" />
     <Compile Include="Assets\Svelto\Svelto.ECS\DataStructures\GroupsList.cs" />
     <Compile Include="Assets\Svelto\Svelto.ECS\DataStructures\TypeSafeDictionary.cs" />
@@ -316,6 +317,9 @@
     </Reference>
     <Reference Include="JetBrains.Rider.Unity.Editor.Plugin.Repacked">
       <HintPath>D:/MyCVisualStudio/Projects/Svelto.ECS.Asteroid/Assets/Svelto/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>D:/MyCVisualStudio/Projects/Svelto.ECS.Asteroid/Assets/Svelto/Svelto.ECS.Debugger/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Advertisements">
       <HintPath>D:/MyCVisualStudio/Projects/Svelto.ECS.Asteroid/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>

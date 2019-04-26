@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Svelto.ECS", "Svelto.ECS.cs
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Svelto.ECS.Components.Unity", "Svelto.ECS.Components.Unity.csproj", "{011C492A-F8F8-8A3B-5F82-4EE148EECFE0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Svelto.ECS.Debugger", "Svelto.ECS.Debugger.csproj", "{3854FEE2-6961-EBED-2065-EA5450FD97FC}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Svelto.Pool.Debugger", "Svelto.Pool.Debugger.csproj", "{17D38FFA-ABFD-6373-C77D-B95DA5D47372}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Svelto.Tasks.StopEditorThread", "Svelto.Tasks.StopEditorThread.csproj", "{61DB15AE-4DBC-44F0-536A-89826AE6FE04}"
@@ -40,6 +42,10 @@ Global
 		{011C492A-F8F8-8A3B-5F82-4EE148EECFE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{011C492A-F8F8-8A3B-5F82-4EE148EECFE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{011C492A-F8F8-8A3B-5F82-4EE148EECFE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3854FEE2-6961-EBED-2065-EA5450FD97FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3854FEE2-6961-EBED-2065-EA5450FD97FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3854FEE2-6961-EBED-2065-EA5450FD97FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3854FEE2-6961-EBED-2065-EA5450FD97FC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{17D38FFA-ABFD-6373-C77D-B95DA5D47372}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{17D38FFA-ABFD-6373-C77D-B95DA5D47372}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17D38FFA-ABFD-6373-C77D-B95DA5D47372}.Release|Any CPU.ActiveCfg = Release|Any CPU
