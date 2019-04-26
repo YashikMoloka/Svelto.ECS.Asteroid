@@ -9,8 +9,8 @@ using UnityEngine.Profiling;
 namespace Svelto.ECS.Debugger.Editor
 {
 
-    public delegate void SystemSelectionCallback(DebugGroup manager, DebugRoot world);
-    public delegate DebugRoot WorldSelectionGetter();
+    public delegate void GroupSelectionCallback(uint? manager, DebugRoot world);
+    public delegate DebugRoot RootSelectionGetter();
 
     public class GroupListView : TreeView
     {
@@ -22,8 +22,8 @@ namespace Svelto.ECS.Debugger.Editor
         private const float kTimingWidth = 70f;
         private const int kAllEntitiesItemId = 0;
 
-        private readonly SystemSelectionCallback systemSelectionCallback;
-        private readonly WorldSelectionGetter getWorldSelection;
+        private readonly GroupSelectionCallback _groupSelectionCallback;
+        private readonly RootSelectionGetter _getRootSelection;
 
         private static GUIStyle RightAlignedLabel
         {
@@ -82,18 +82,18 @@ namespace Svelto.ECS.Debugger.Editor
             return stateForCurrentWorld;
         }
 
-        public static GroupListView CreateList(DebugTree tree, List<TreeViewState> states, List<string> stateNames, SystemSelectionCallback systemSelectionCallback, WorldSelectionGetter worldSelectionGetter)
+        public static GroupListView CreateList(DebugTree tree, List<TreeViewState> states, List<string> stateNames, GroupSelectionCallback groupSelectionCallback, RootSelectionGetter rootSelectionGetter)
         {
-            var state = GetStateForWorld(worldSelectionGetter(), states, stateNames);
+            var state = GetStateForWorld(rootSelectionGetter(), states, stateNames);
             var header = new MultiColumnHeader(GetHeaderState());
-            return new GroupListView(tree, state, header, systemSelectionCallback, worldSelectionGetter);
+            return new GroupListView(tree, state, header, groupSelectionCallback, rootSelectionGetter);
         }
 
         public DebugTree Data;
-        internal GroupListView(DebugTree tree, TreeViewState state, MultiColumnHeader header, SystemSelectionCallback systemSelectionCallback, WorldSelectionGetter worldSelectionGetter) : base(state, header)
+        internal GroupListView(DebugTree tree, TreeViewState state, MultiColumnHeader header, GroupSelectionCallback groupSelectionCallback, RootSelectionGetter rootSelectionGetter) : base(state, header)
         {
-            this.getWorldSelection = worldSelectionGetter;
-            this.systemSelectionCallback = systemSelectionCallback;
+            this._getRootSelection = rootSelectionGetter;
+            this._groupSelectionCallback = groupSelectionCallback;
             columnIndexForTreeFoldouts = 0;
             Data = tree;
             RebuildNodes();
@@ -108,7 +108,7 @@ namespace Svelto.ECS.Debugger.Editor
 //                worldsById.Add(id, system.Parent);
 //                active = false;
 //            }
-//            var name = getWorldSelection() == null ? $"{system.GetType().Name} ({system.World.Name})" : system.GetType().Name;
+//            var name = _getRootSelection() == null ? $"{system.GetType().Name} ({system.World.Name})" : system.GetType().Name;
 //            var item = new TreeViewItem { id = id, displayName = name };
 //
 //            var hideNode = new HideNode(item) { Active = active };
@@ -175,8 +175,10 @@ namespace Svelto.ECS.Debugger.Editor
 
             if (Application.isPlaying)
             {
-                var root = getWorldSelection();
+                var root = _getRootSelection();
                 //todo
+                if (root == null)
+                    return null;
                 var groups = Data.DebugRoots.Find(r => r == root).DebugGroups;
                 foreach (var debugGroup in groups)
                 {
@@ -189,7 +191,7 @@ namespace Svelto.ECS.Debugger.Editor
                     children.Add(node);
                 }
             }
-            if (children != null || getWorldSelection() == null)
+            if (children != null || _getRootSelection() == null)
             {
                 var systemNode = new HideNode(new TreeViewItem() {id = currentId++, displayName = "Def"});
                 systemNode.Children = children;
@@ -247,7 +249,7 @@ namespace Svelto.ECS.Debugger.Editor
             if (!root.hasChildren)
                 root.children = new List<TreeViewItem>(0);
 
-            if (getWorldSelection() != null)
+            if (_getRootSelection() != null)
             {
                 //root.children.Insert(0, new TreeViewItem(kAllEntitiesItemId, 0, $"All Entities (Default)"));
             }
@@ -316,12 +318,12 @@ namespace Svelto.ECS.Debugger.Editor
         {
             if (selectedIds.Count > 0 && managersById.ContainsKey(selectedIds[0]))
             {
-                systemSelectionCallback(managersById[selectedIds[0]], worldsById[selectedIds[0]]);
+                _groupSelectionCallback(managersById[selectedIds[0]].Id, worldsById[selectedIds[0]]);
             }
             else
             {
-                systemSelectionCallback(null, null);
-                SetSelection(getWorldSelection() == null ? new List<int>() : new List<int> {kAllEntitiesItemId});
+                _groupSelectionCallback(null, null);
+                SetSelection(_getRootSelection() == null ? new List<int>() : new List<int> {kAllEntitiesItemId});
             }
         }
 
