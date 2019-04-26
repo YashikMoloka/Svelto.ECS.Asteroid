@@ -55,7 +55,7 @@ namespace Svelto.ECS.Debugger.DebugStructure
                     var current = enu.Current;
                     var key = current.Key;
                     var val = current.Value;
-                    DebugGroups.Add(new DebugGroup(key, val));
+                    DebugGroups.Add(new DebugGroup(key, val, this));
                     
                 }
             }
@@ -64,15 +64,17 @@ namespace Svelto.ECS.Debugger.DebugStructure
 
     public class DebugGroup
     {
+        public DebugRoot Parent;
         public uint Id;
         private Dictionary<Type, ITypeSafeDictionary> GroupDB; 
         
         public List<DebugEntity> DebugEntities = new List<DebugEntity>();
 
-        public DebugGroup(uint key, Dictionary<Type, ITypeSafeDictionary> val)
+        public DebugGroup(uint key, Dictionary<Type, ITypeSafeDictionary> val, DebugRoot debugRoot)
         {
             Id = key;
             GroupDB = val;
+            Parent = debugRoot;
             Process();
         }
 

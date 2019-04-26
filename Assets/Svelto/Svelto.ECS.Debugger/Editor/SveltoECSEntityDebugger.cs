@@ -197,11 +197,11 @@ namespace Svelto.ECS.Debugger.Editor
 //                );
 //        }
 //
-//        private void CreateSystemListView()
-//        {
-//            systemListView = SystemListView.CreateList(systemListStates, systemListStateNames, (system, world) => SetSystemSelection(system, world, false, true), () => WorldSelection, () => ShowInactiveSystems);
-//            systemListView.multiColumnHeader.ResizeToFit();
-//        }
+        private void CreateSystemListView()
+        {
+            systemListView = SystemListView.CreateList(systemListStates, systemListStateNames, (system, world) => SetSystemSelection(system, world, false, true), () => WorldSelection, () => ShowInactiveSystems);
+            systemListView.multiColumnHeader.ResizeToFit();
+        }
 //
 //        private void CreateEntityQueryListView()
 //        {
@@ -233,10 +233,10 @@ namespace Svelto.ECS.Debugger.Editor
 
 //            CreateEntitySelectionProxy();
 //            CreateWorldPopup();
-//            CreateSystemListView();
+            CreateSystemListView();
 //            CreateEntityQueryListView();
 //            CreateEntityListView();
-//            systemListView.TouchSelection();
+            systemListView.TouchSelection();
 
             EditorApplication.playModeStateChanged += OnPlayModeStateChange;
         }
@@ -280,17 +280,15 @@ namespace Svelto.ECS.Debugger.Editor
 
         private void Update()
         {
-            //systemListView.UpdateTimings();
-
             if (repaintLimiter.SimulationAdvanced())
             {
                 Repaint();
             }
-            else if (!Application.isPlaying)
-            {
-//                if (systemListView.NeedsReload || entityQueryListView.NeedsReload || entityListView.NeedsReload || !filterUI.TypeListValid())
-//                    Repaint();
-            }
+//            else if (!Application.isPlaying)
+//            {
+////                if (systemListView.NeedsReload || entityQueryListView.NeedsReload || entityListView.NeedsReload || !filterUI.TypeListValid())
+////                    Repaint();
+//            }
         }
 
         private void ShowWorldPopup()
