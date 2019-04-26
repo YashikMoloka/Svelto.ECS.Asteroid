@@ -16,6 +16,14 @@ namespace Svelto.ECS.Debugger.DebugStructure
         {
             DebugRoots.Add(new DebugRoot(root));
         }
+
+        public void Update()
+        {
+            foreach (var debugRoot in DebugRoots)
+            {
+                debugRoot.Process();
+            }
+        }
     }
 
     public class DebugRoot

@@ -2,7 +2,7 @@
     "name": "Svelto.ECS.Debugger",
     "references": [
         "GUID:87620019395d97447ac7b27c09147d84",
-        "GUID:946b0ca83086b494e97e78adba964829"
+        "GUID:88feec93916afc64db45cbba3a334219"
     ],
     "optionalUnityReferences": [],
     "includePlatforms": [],

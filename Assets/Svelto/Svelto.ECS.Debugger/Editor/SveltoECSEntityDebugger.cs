@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Svelto.ECS.Debugger.DebugStructure;
 using UnityEditor;
 using UnityEditor.IMGUI.Controls;
 using UnityEngine;
@@ -48,32 +49,57 @@ namespace Svelto.ECS.Debugger.Editor
         }
 
         private static GUIStyle boxStyle;
+        private static SveltoECSEntityDebugger Instance { get; set; }
 
-//        public ComponentSystemBase SystemSelection { get; private set; }
+//        private EntitySelectionProxy selectionProxy;
 //
-//        public World SystemSelectionWorld
-//        {
-//            get { return systemSelectionWorld?.IsCreated == true ? systemSelectionWorld : null; }
-//            private set { systemSelectionWorld = value; }
-//        }
+//        [FormerlySerializedAs("componentGroupListStates")]
+//        [SerializeField] private List<TreeViewState> entityQueryListStates = new List<TreeViewState>();
+//        [FormerlySerializedAs("componentGroupListStateNames")]
+//        [SerializeField] private List<string> entityQueryListStateNames = new List<string>();
+//        private EntityQueryListView entityQueryListView;
 //
-//        public void SetSystemSelection(ComponentSystemBase manager, World world, bool updateList, bool propagate)
-//        {
-//            if (manager != null && world == null)
-//                throw new ArgumentNullException("System cannot have null world");
-//            SystemSelection = manager;
-//            SystemSelectionWorld = world;
-//            if (updateList)
-//                systemListView.SetSystemSelection(manager, world);
+        private List<TreeViewState> groupListStates = new List<TreeViewState>();
+        private List<string> groupListStateNames = new List<string>();
+        public GroupListView groupListView;
+        //private DebugRoot rootSelection;
+//
+        [SerializeField] private TreeViewState entityListState = new TreeViewState();
+        private EntityListView entityListView;
+//
+//        [SerializeField] private ChunkInfoListView.State chunkInfoListState = new ChunkInfoListView.State();
+//        private ChunkInfoListView chunkInfoListView;
+//
+//        //TODO 
+//        //internal WorldPopup m_WorldPopup;
+//
+//        private ComponentTypeFilterUI filterUI;
+//
+        //public DebugRoot RootSelection => rootSelection;
+
+        [SerializeField] private string lastEditModeWorldSelection = "lastEditModeWorldSelection";//WorldPopup.kNoWorldName;
+        [SerializeField] private string lastPlayModeWorldSelection = "lastPlayModeWorldSelection";//WorldPopup.kNoWorldName;
+        [SerializeField] private bool showingPlayerLoop;
+
+
+        public DebugGroup GroupSelection { get; private set; }
+//
+        public DebugRoot RootSelection { get; set; }
+//
+        public void SetGroupSelection(DebugGroup manager, DebugRoot root, bool updateList, bool propagate)
+        {
+            if (manager != null && root == null)
+                throw new ArgumentNullException("System cannot have null world");
+            GroupSelection = manager;
+            RootSelection = root;
+            if (updateList)
+                groupListView.SetSystemSelection(manager, root);
 //            CreateEntityQueryListView();
 //            if (propagate)
 //            {
-//                if (SystemSelection is ComponentSystemBase)
-//                    entityQueryListView.TouchSelection();
-//                else
-//                    ApplyAllEntitiesFilter();
+//                entityQueryListView.TouchSelection();
 //            }
-//        }
+        }
 //
 //        public EntityListQuery EntityListQuerySelection { get; private set; }
 //
@@ -90,22 +116,22 @@ namespace Svelto.ECS.Debugger.Editor
 //
 //        public Entity EntitySelection => selectionProxy.Entity;
 //
-//        internal void SetEntitySelection(Entity newSelection, bool updateList)
-//        {
-//            if (updateList)
-//                entityListView.SetEntitySelection(newSelection);
-//
-//            var world = WorldSelection ?? (SystemSelection as ComponentSystemBase)?.World;
-//            if (world != null && newSelection != Entity.Null)
-//            {
-//                selectionProxy.SetEntity(world, newSelection);
-//                Selection.activeObject = selectionProxy;
-//            }
-//            else if (Selection.activeObject == selectionProxy)
-//            {
-//                Selection.activeObject = null;
-//            }
-//        }
+        internal void SetEntitySelection(Entity newSelection, bool updateList)
+        {
+            if (updateList)
+                entityListView.SetEntitySelection(newSelection);
+
+            var world = WorldSelection ?? (SystemSelection as ComponentSystemBase)?.World;
+            if (world != null && newSelection != Entity.Null)
+            {
+                selectionProxy.SetEntity(world, newSelection);
+                Selection.activeObject = selectionProxy;
+            }
+            else if (Selection.activeObject == selectionProxy)
+            {
+                Selection.activeObject = null;
+            }
+        }
 //
 //        internal static void SetAllSelections(World world, ComponentSystemBase system, EntityListQuery entityQuery,
 //            Entity entity)
@@ -119,44 +145,6 @@ namespace Svelto.ECS.Debugger.Editor
 //            Instance.entityListView.FrameSelection();
 //        }
 
-        private static SveltoECSEntityDebugger Instance { get; set; }
-
-//        private EntitySelectionProxy selectionProxy;
-//
-//        [FormerlySerializedAs("componentGroupListStates")]
-//        [SerializeField] private List<TreeViewState> entityQueryListStates = new List<TreeViewState>();
-//        [FormerlySerializedAs("componentGroupListStateNames")]
-//        [SerializeField] private List<string> entityQueryListStateNames = new List<string>();
-//        private EntityQueryListView entityQueryListView;
-//
-//        [SerializeField] private List<TreeViewState> systemListStates = new List<TreeViewState>();
-//        [SerializeField] private List<string> systemListStateNames = new List<string>();
-        public SystemListView systemListView;
-//
-//        [SerializeField] private TreeViewState entityListState = new TreeViewState();
-//        private EntityListView entityListView;
-//
-//        [SerializeField] private ChunkInfoListView.State chunkInfoListState = new ChunkInfoListView.State();
-//        private ChunkInfoListView chunkInfoListView;
-//
-//        //TODO 
-//        //internal WorldPopup m_WorldPopup;
-//
-//        private ComponentTypeFilterUI filterUI;
-//
-//        public World WorldSelection
-//        {
-//            get
-//            {
-//                if (worldSelection != null && worldSelection.IsCreated)
-//                    return worldSelection;
-//                return null;
-//            }
-//        }
-
-        [SerializeField] private string lastEditModeWorldSelection = "lastEditModeWorldSelection";//WorldPopup.kNoWorldName;
-        [SerializeField] private string lastPlayModeWorldSelection = "lastPlayModeWorldSelection";//WorldPopup.kNoWorldName;
-        [SerializeField] private bool showingPlayerLoop;
 
 //        public void SetWorldSelection(World selection, bool propagate)
 //        {
@@ -183,29 +171,30 @@ namespace Svelto.ECS.Debugger.Editor
 //            entityListView.SetFilter(filter);
 //        }
 //
-//        private void CreateEntityListView()
-//        {
-//            entityListView?.Dispose();
-//
-//            entityListView = new EntityListView(
-//                entityListState,
-//                EntityListQuerySelection,
-//                x => SetEntitySelection(x, false),
-//                () => SystemSelectionWorld ?? WorldSelection,
-//                () => SystemSelection,
-//                x => chunkInfoListView.SetChunkArray(x)
-//                );
-//        }
-//
-        private void CreateSystemListView()
+        private void CreateEntityListView()
         {
-            systemListView = SystemListView.CreateList(systemListStates, systemListStateNames, (system, world) => SetSystemSelection(system, world, false, true), () => WorldSelection, () => ShowInactiveSystems);
-            systemListView.multiColumnHeader.ResizeToFit();
+            entityListView?.Dispose();
+
+            entityListView = new EntityListView(
+                entityListState,
+                EntityListQuerySelection,
+                x => SetEntitySelection(x, false),
+                () => SystemSelectionWorld ?? WorldSelection,
+                () => SystemSelection,
+                x => chunkInfoListView.SetChunkArray(x)
+                );
+        }
+//
+        private void CreateGroupListView()
+        {
+            groupListView = GroupListView.CreateList(Data, groupListStates, groupListStateNames, 
+                (group, root) => SetGroupSelection(group, root, false, true), () => RootSelection);
+            groupListView.multiColumnHeader.ResizeToFit();
         }
 //
 //        private void CreateEntityQueryListView()
 //        {
-//            entityQueryListView = EntityQueryListView.CreateList(SystemSelection as ComponentSystemBase, entityQueryListStates, entityQueryListStateNames, x => SetEntityListSelection(x, false, true), () => SystemSelectionWorld);
+//            entityQueryListView = EntityQueryListView.CreateList(groupSelection as ComponentSystemBase, entityQueryListStates, entityQueryListStateNames, x => SetEntityListSelection(x, false, true), () => SystemSelectionWorld);
 //        }
 //
 //        [SerializeField] private bool ShowInactiveSystems;
@@ -225,41 +214,40 @@ namespace Svelto.ECS.Debugger.Editor
 //        }
 //
 //
-//        private World worldSelection;
-
+        public DebugTree Data;
         private void OnEnable()
         {
             Instance = this;
-
+            UpdateData();
 //            CreateEntitySelectionProxy();
 //            CreateWorldPopup();
-            CreateSystemListView();
+            CreateGroupListView();
 //            CreateEntityQueryListView();
 //            CreateEntityListView();
-            systemListView.TouchSelection();
+//            groupListView.TouchSelection();
 
             EditorApplication.playModeStateChanged += OnPlayModeStateChange;
         }
 
-//        private void CreateEntitySelectionProxy()
-//        {
-//            selectionProxy = ScriptableObject.CreateInstance<EntitySelectionProxy>();
-//            selectionProxy.hideFlags = HideFlags.HideAndDontSave;
+        private void CreateEntitySelectionProxy()
+        {
+            selectionProxy = ScriptableObject.CreateInstance<EntitySelectionProxy>();
+            selectionProxy.hideFlags = HideFlags.HideAndDontSave;
+
+            selectionProxy.EntityControlDoubleClick += entity =>
+            {
+                entityListView?.OnEntitySelected(entity);
+            };
+        }
 //
-//            selectionProxy.EntityControlDoubleClick += entity =>
-//            {
-//                entityListView?.OnEntitySelected(entity);
-//            };
-//        }
-//
-//        private void OnDestroy()
-//        {
-//            entityListView?.Dispose();
-//        }
+        private void OnDestroy()
+        {
+            entityListView?.Dispose();
+        }
 
         private void OnDisable()
         {
-            //entityListView?.Dispose();
+            entityListView?.Dispose();
             if (Instance == this)
                 Instance = null;
 //            if (selectionProxy)
@@ -270,6 +258,7 @@ namespace Svelto.ECS.Debugger.Editor
 
         private void OnPlayModeStateChange(PlayModeStateChange change)
         {
+            //if (change == PlayModeStateChange.EnteredPlayMode)
 //            if (change == PlayModeStateChange.ExitingPlayMode)
 //                SetAllEntitiesFilter(null);
             if (change == PlayModeStateChange.ExitingPlayMode /*&& Selection.activeObject == selectionProxy*/)
@@ -282,6 +271,7 @@ namespace Svelto.ECS.Debugger.Editor
         {
             if (repaintLimiter.SimulationAdvanced())
             {
+                UpdateData();
                 Repaint();
             }
 //            else if (!Application.isPlaying)
@@ -291,17 +281,31 @@ namespace Svelto.ECS.Debugger.Editor
 //            }
         }
 
+        private void UpdateData()
+        {
+            if (Data == null)
+            {
+                if (Application.isPlaying)
+                {
+                    Data = Debugger.Instance.DebugInfo;
+                    if (Data.DebugRoots.Count > 0)
+                        RootSelection = Data.DebugRoots[0];
+                    CreateGroupListView();
+                }
+            }
+        }
+
         private void ShowWorldPopup()
         {
             //m_WorldPopup.OnGUI(showingPlayerLoop, EditorApplication.isPlaying ? lastPlayModeWorldSelection : lastEditModeWorldSelection);
         }
 
-        private void SystemList()
+        private void GroupList()
         {
             var rect = GUIHelpers.GetExpandingRect();
 //            if (World.AllWorlds.Count != 0)
 //            {
-                systemListView.OnGUI(rect);
+                groupListView.OnGUI(rect);
 //            }
 //            else
 //            {
@@ -322,19 +326,19 @@ namespace Svelto.ECS.Debugger.Editor
 
         private void EntityHeader()
         {
-//            if (WorldSelection != null || SystemSelectionWorld != null)
-//            {
-//                var rect = new Rect(kSystemListWidth, 3f, CurrentEntityViewWidth, kLineHeight);
-//                if (SystemSelection == null)
-//                {
-//                    GUI.Label(rect, "All Entities", EditorStyles.boldLabel);
-//                }
-//                else
-//                {
-//                    var type = SystemSelection.GetType();
-//                    GUI.Label(rect, $"<b>{type.Namespace}</b>.{type.Name}", LabelStyle);
-//                }
-//            }
+            if (RootSelection != null || RootSelection != null)
+            {
+                var rect = new Rect(kSystemListWidth, 3f, CurrentEntityViewWidth, kLineHeight);
+                if (GroupSelection == null)
+                {
+                    GUI.Label(rect, "All Entities", EditorStyles.boldLabel);
+                }
+                else
+                {
+                    //var type = GroupSelection.GetType();
+                    GUI.Label(rect, Debugger.GetNameGroup(GroupSelection.Id), LabelStyle);
+                }
+            }
         }
 
 //        private void EntityQueryList()
@@ -378,7 +382,7 @@ namespace Svelto.ECS.Debugger.Editor
         void EntityList()
         {
             GUILayout.BeginVertical(BoxStyle);
-            //entityListView.OnGUI(GUIHelpers.GetExpandingRect());
+            entityListView.OnGUI(GUIHelpers.GetExpandingRect());
             GUILayout.EndVertical();
         }
 
@@ -412,7 +416,7 @@ namespace Svelto.ECS.Debugger.Editor
             GroupsHeader();
 
             GUILayout.BeginVertical(BoxStyle);
-            SystemList();
+            GroupList();
             GUILayout.EndVertical();
 
             GUILayout.EndArea(); // end System side

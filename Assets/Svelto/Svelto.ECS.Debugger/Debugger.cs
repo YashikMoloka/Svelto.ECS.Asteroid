@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using Newtonsoft.Json;
 using Svelto.ECS.Debugger.DebugStructure;
 using UnityEngine;
@@ -8,8 +10,9 @@ namespace Svelto.ECS.Debugger
     public class Debugger : MonoBehaviour
     {
         public static Debugger Instance;
-        
-        private DebugTree DebugInfo = new DebugTree();
+        private static Dictionary<uint, string> GroupDebugNames = new Dictionary<uint, string>();
+        [NonSerialized]
+        public DebugTree DebugInfo = new DebugTree();
         
         private void Awake()
         {
@@ -24,12 +27,23 @@ namespace Svelto.ECS.Debugger
 
         private void Update()
         {
-            //_infos[0]?.GetInfo();
+            DebugInfo.Update();
         }
 
         public void AddEnginesRoot(EnginesRoot root)
         {
             DebugInfo.AddRootToTree(root);
+        }
+
+        public static void RegisterNameGroup(uint id, string name)
+        {
+            GroupDebugNames[id] = name;
+        }
+        public static string GetNameGroup(uint id)
+        {
+            if (!GroupDebugNames.ContainsKey(id))
+                return $"Unknown group: {id}";
+            return GroupDebugNames[id];
         }
     }
 
