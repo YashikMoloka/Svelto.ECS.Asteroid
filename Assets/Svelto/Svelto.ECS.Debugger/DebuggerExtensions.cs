@@ -1,6 +1,6 @@
 using Svelto.ECS;
 
-namespace Code.Svelto.ECS.Debugger
+namespace Svelto.ECS.Debugger
 {
     public static class DebuggerExtensions
     {

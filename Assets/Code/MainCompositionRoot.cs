@@ -3,7 +3,7 @@ using Code.Engines;
 using Code.MonoUI;
 using Code.Others;
 using Code.Structs;
-using Code.Svelto.ECS.Debugger;
+using Svelto.ECS.Debugger;
 using Svelto.Context;
 using Svelto.ECS;
 using Svelto.ECS.Schedulers.Unity;
