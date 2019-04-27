@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Code.Others;
 using Svelto.ECS;
@@ -5,6 +6,7 @@ using UnityEngine;
 
 namespace Code.Structs
 {
+    [Serializable]
     public struct AsteroidInfoEntityStruct : IEntityStruct
     {
         public Vector2[] Points;

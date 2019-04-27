@@ -1,8 +1,10 @@
+using System;
 using Svelto.ECS;
 using UnityEngine;
 
 namespace Code.Structs
 {
+    [Serializable]
     public struct PlayerInputDataEntityStruct : IEntityStruct
     {
         public bool IsRight;

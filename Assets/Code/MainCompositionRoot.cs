@@ -38,7 +38,7 @@ namespace Code
         private void SetupEngines()
         {
             _unityEntitySubmissionScheduler = new UnityEntitySubmissionScheduler();
-            _enginesRoot                    = new EnginesRoot(_unityEntitySubmissionScheduler);
+            _enginesRoot                    = new EnginesRootNamed(_unityEntitySubmissionScheduler, "AsteroidMainRoot");
             _entityFactory = _enginesRoot.GenerateEntityFactory();
             var entityFunctions = _enginesRoot.GenerateEntityFunctions();
             var factory = _enginesRoot.GenerateConsumerFactory();

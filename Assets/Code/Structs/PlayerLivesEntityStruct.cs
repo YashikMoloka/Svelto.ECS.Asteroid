@@ -1,7 +1,9 @@
+using System;
 using Svelto.ECS;
 
 namespace Code.Structs
 {
+    [Serializable]
     public struct PlayerLivesEntityStruct : IEntityStruct
     {
         public int Lives;

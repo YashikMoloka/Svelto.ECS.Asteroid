@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using Newtonsoft.Json;
+using System.Linq;
 using Svelto.ECS.Debugger.DebugStructure;
 using UnityEngine;
 using Object = UnityEngine.Object;
@@ -11,6 +11,7 @@ namespace Svelto.ECS.Debugger
     {
         public static Debugger Instance;
         private static Dictionary<uint, string> GroupDebugNames = new Dictionary<uint, string>();
+        private static Dictionary<EnginesRoot, string> EnginesRootDebugNames = new Dictionary<EnginesRoot, string>();
         [NonSerialized]
         public DebugTree DebugInfo = new DebugTree();
         
@@ -32,6 +33,10 @@ namespace Svelto.ECS.Debugger
 
         public void AddEnginesRoot(EnginesRoot root)
         {
+            if (root is EnginesRootNamed named)
+            {
+                EnginesRootDebugNames[root] = named.Name;
+            }
             DebugInfo.AddRootToTree(root);
         }
 
@@ -45,39 +50,12 @@ namespace Svelto.ECS.Debugger
                 return $"Unknown group: {id}";
             return GroupDebugNames[id];
         }
-    }
-
-    public class UnityConverter : JsonConverter
-    {
-        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+        public static string GetNameRoot(DebugRoot root)
         {
-            Object resolution = (Object) value;
-            writer.WriteStartObject();
-            writer.WritePropertyName("name");
-            writer.WriteValue(resolution.name);
-            writer.WriteEndObject();
-        }
-
-        public override bool CanConvert(System.Type objectType)
-        {
-            return objectType == typeof (Object) || objectType.IsSubclassOf(typeof (Object));
-        }
-
-        public override object ReadJson(
-            JsonReader reader,
-            System.Type objectType,
-            object existingValue,
-            JsonSerializer serializer)
-        {
-            return (object) null;
-        }
-
-        public override bool CanRead
-        {
-            get
-            {
-                return true;
-            }
+            var engroot = Instance?.DebugInfo.DebugRoots.FirstOrDefault(r => root == r)?.EnginesRoot;
+            if (engroot == null || !EnginesRootDebugNames.ContainsKey(engroot))
+                return $"Unknown root";
+            return EnginesRootDebugNames[engroot];
         }
     }
 }

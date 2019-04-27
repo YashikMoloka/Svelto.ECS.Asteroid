@@ -11,7 +11,9 @@ namespace Svelto.ECS.Debugger.DebugStructure
     public class DebugTree
     {
         public List<DebugRoot> DebugRoots = new List<DebugRoot>();
-
+        
+        public delegate void UpdateHandler();
+        public event UpdateHandler OnUpdate;
         public void AddRootToTree(EnginesRoot root)
         {
             DebugRoots.Add(new DebugRoot(root));
@@ -23,6 +25,12 @@ namespace Svelto.ECS.Debugger.DebugStructure
             {
                 debugRoot.Process();
             }
+            OnUpdate?.Invoke();
+        }
+
+        public void Clear()
+        {
+            DebugRoots.Clear();
         }
     }
 
@@ -41,13 +49,15 @@ namespace Svelto.ECS.Debugger.DebugStructure
         }
 
         #endregion
-        
+
+        public EnginesRoot EnginesRoot; 
         public FasterDictionary<uint, Dictionary<Type, ITypeSafeDictionary>> Root;
         public HashSet<IEngine> Engines;
         public List<DebugGroup> DebugGroups = new List<DebugGroup>();
 
         public DebugRoot(EnginesRoot root)
         {
+            EnginesRoot = root;
             Engines = (HashSet<IEngine>) EnginesField.GetValue(root);
             Root = (FasterDictionary<uint, Dictionary<Type, ITypeSafeDictionary>>) EntityDBField.GetValue(root);
             Process();
@@ -125,6 +135,7 @@ namespace Svelto.ECS.Debugger.DebugStructure
     public class DebugEntity
     {
         public uint Id;
+        
         public List<DebugStruct> DebugStructs = new List<DebugStruct>();
 
         public DebugEntity(uint key)

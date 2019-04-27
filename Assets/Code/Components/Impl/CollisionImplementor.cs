@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace Code.Components.Impl
 {
+    [System.Serializable]
     public class CollisionImplementor : MonoBehaviour, ICollisionComponent, IImplementor
     {
         public bool IsCollide { get; set; }

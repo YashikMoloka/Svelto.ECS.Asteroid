@@ -25,6 +25,7 @@ namespace Code.Others
                 .Select(Polar2Cartesian)
                 .ToList();
             var gameobject = new GameObject();
+            gameobject.name = gameobject.GetInstanceID().ToString();
             gameobject.transform.position = randomvector;
             var col = gameobject.AddComponent<PolygonCollider2D>();
             col.points = cartesian.ToArray();

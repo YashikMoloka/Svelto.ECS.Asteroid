@@ -18,6 +18,7 @@ namespace Code.Others
             var template = Resources.Load<GameObject>("Prefabs/Shoot");
             
             var shoot = GameObject.Instantiate(template);
+            shoot.name = shoot.GetInstanceID().ToString();
             shoot.transform.position = pos;
             shoot.transform.rotation = Quaternion.Euler(0, 0, Vector2.SignedAngle(Vector2.up, forward));
             var implementors = shoot.GetComponentsInChildren<IImplementor>() ?? new object[0];

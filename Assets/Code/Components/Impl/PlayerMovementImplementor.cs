@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace Code.Components.Impl
 {
+    [System.Serializable]
     public class PlayerMovementImplementor
         : MonoBehaviour, IImplementor, ISpeedComponent, ITransformComponent
     {
